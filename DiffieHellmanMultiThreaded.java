@@ -43,7 +43,10 @@ public class DiffieHellmanMultiThreaded {
             BigInteger sharedSecret = bob.getSharedSecret(alice.getPublicKey());
             System.out.println("Bob shared secret: " + sharedSecret);
         });
-        
+
+        // The threads are started using the start() method
+        // join() method is called on each thread to wait for the threads to complete, before the program exits.
+
         aliceThread.start();
         bobThread.start();
         
