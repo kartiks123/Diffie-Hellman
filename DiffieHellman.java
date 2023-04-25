@@ -51,6 +51,8 @@ public class DiffieHellman
         System.out.println("Public Key 2 : " + pub_key2);
         
         long start = System.nanoTime();
+
+        // New Algorithm
         while(counter.compareTo(int1) < 0) // This loop is used to found the shared secret key
         {
             if(key1.compareTo(pub_key1) == 0)
