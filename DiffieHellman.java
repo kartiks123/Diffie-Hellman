@@ -26,15 +26,9 @@ public class DiffieHellman
         Scanner input = new Scanner(System.in);
         System.out.print("Enter key bit number : ");
         N = input.nextInt();
-        BigInteger privatekey = new BigInteger(N, random);
+
+        BigInteger privatekey = new BigInteger(N, random); // Private Key being generated here
      
-        while(privatekey.compareTo(int1) == 1 || privatekey.compareTo(int1) == 0) 
-        {
-            System.out.print("Too big value! \nEnter key bit number again : ");
-            N = input.nextInt();
-            privatekey = new BigInteger(N, random);
-        }
-        
         BigInteger publickey = int2.modPow(privatekey,int1);
         user.privatekey = privatekey;
         user.publickey = publickey;
